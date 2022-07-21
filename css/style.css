@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: font-family: 'Open Sans', sans-serif;
   color: #0c0c0c;
   background-color: #ffffff;
   overflow-x: hidden;
@@ -10,8 +10,8 @@ body {
   text-align: center;
   box-shadow: 5px 10px 18px rgba(50, 0, 0, 0.7);
 }
-  .market h4{font-size: 4vw;}
-  .market p{font-size: 1.2vw;}
+  .market h4{font-size: 2.7vw;}
+  .market p{font-size: 1vw; font-family: 'Libre Baskerville', serif;}
 
 .market2{border-right: 1px solid #F4F4F4;
   padding: 20px 20px;
@@ -20,16 +20,64 @@ body {
   .market2 h4{font-size: 2.5vw;}
   .market2 p{font-size: 1.2vw;}
 
-.solutio{padding: 20px 20px;
-  text-align: center;
+.solutio{padding: 20px 40px;
+  text-align: left;
+  transition: all 1s;
+   box-shadow: 5px 10px 18px rgba(50, 0, 0, 0.7);
  }
+
+ .solutio:hover{ transform: scale(0.9);
+  }
+
 .solutio h4{font-size: 2vw;
    font-family: roboto;
    padding-top: 20px;}
-.solutio p{font-size: 1.2vw; text-align: left;}
+.solutio p{font-size: 1.2vw; text-align: left; font-family: 'Libre Baskerville', serif;}
 
 .solution2{border-right: 1px solid #F4F4F4;
   border-left: 1px solid #F4F4F4;}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: transparent;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #FA8585;
+  color: white;
+  padding: 30px;
+  transform: rotateY(180deg);
+}
+
 
 .layout_padding {
   padding: 90px 0;
@@ -41,6 +89,10 @@ body {
 
 .layout_padding2-top {
   padding-top: 75px;
+}
+
+.layout_padding2-top2 {
+  padding-top: 300px;
 }
 
 .layout_padding2-bottom {
@@ -150,8 +202,8 @@ a:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.45)), to(rgba(50, 0, 0, 0.01))), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.01)));
-  background: linear-gradient(to right, rgba(50, 0, 0, 0.45), rgba(50, 0, 0, 0.01)), linear-gradient(to bottom, rgba(90, 0, 0, 0.25), rgba(90, 0, 0, 0.01));
+ /* background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.45)), to(rgba(50, 0, 0, 0.01))), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.01)));
+  background: linear-gradient(to right, rgba(50, 0, 0, 0.15), rgba(50, 0, 0, 0.01)), linear-gradient(to bottom, rgba(90, 0, 0, 0.05), rgba(90, 0, 0, 0.01));*/
 }
 
 .sub_page .hero_area {
@@ -198,7 +250,7 @@ a:focus {
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 10px 25px;
-  color: #ffffff;
+  color: #750E06;
   text-align: center;
   text-transform: uppercase;
   -webkit-transition: all 0.3s;
@@ -206,7 +258,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link {
-  color: #750E06;
+  color: #EF4D48;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -336,11 +388,12 @@ a:focus {
 }
 
 .slider_section .detail-box h1 {
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 15px;
-  color: #ffffff;
-  font-size: 3.5vw;
+  color: #750E06;
+  font-size: 2.5vw;
   text-transform: uppercase;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .slider_section .detail-box a {
@@ -492,6 +545,33 @@ a:focus {
 }
 
 .service_section .btn-box a:hover {
+  background-color: transparent;
+  color: #750E06;
+}
+
+
+.btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: left;
+  margin-top: 45px;
+}
+
+.btn-box a {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #750E06;
+  color: #ffffff;
+  border-radius: 0px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid #750E06;
+}
+
+.btn-box a:hover {
   background-color: transparent;
   color: #750E06;
 }
